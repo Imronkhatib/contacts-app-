@@ -32,5 +32,12 @@ class V1::ContactsController < ApplicationController
     phone_number: params[:input_phone_number] 
     )
   end
+
+  def destroy
+    the_id = params[:id]
+    contact = Contact.find_by(id: the_id)
+    contact.destroy
+    render json: 'you have delete a contact'
+  end
 end
 
