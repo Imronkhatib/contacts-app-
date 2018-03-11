@@ -1,4 +1,4 @@
-require 'unirest'
+# require 'unirest'
 
 # response = Unirest.post('http://localhost:3000/v1/contacts', parameters:{
 #   input_first_name: '',
@@ -14,4 +14,4 @@ require 'unirest'
 #   input_phone_number: '7107074070'
 #   })
 
-response = Unirest.delete('http://localhost:3000/v1/contacts/1')
+# response = Unirest.delete('http://localhost:3000/v1/contacts/1')
