@@ -28,8 +28,10 @@ class V1::ContactsController < ApplicationController
     contact.update(
     first_name: params[:input_first_name], 
     last_name: params[:input_last_name],
+    middle_name: params[:input_middle_name],
     email: params[:input_email], 
-    phone_number: params[:input_phone_number] 
+    phone_number: params[:input_phone_number],
+    bio: params[:input_bio] 
     )
   end
 

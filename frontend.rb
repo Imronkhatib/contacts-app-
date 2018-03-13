@@ -1,17 +1,11 @@
-# require 'unirest'
+require 'unirest'
 
-# response = Unirest.post('http://localhost:3000/v1/contacts', parameters:{
-#   input_first_name: '',
-#   input_last_name: '',
-#   input_email: '',
-#   input_phone_number: ''
-#   })
-
-# response = Unirest.patch('http://localhost:3000/v1/contacts/1', parameters:{
-#   input_first_name: 'Mitch',
-#   input_last_name: 'Michael',
-#   input_email: 'mitchmike@gmail.com',
-#   input_phone_number: '7107074070'
-#   })
-
-# response = Unirest.delete('http://localhost:3000/v1/contacts/1')
+response = Unirest.post('http://localhost:3000/v1/contacts', parameters:{first_name: 'John',
+  last_name: 'Berger',
+  middle_name: 'K.',
+  email: 'lauri.hernandez@gmail.com',
+  phone_number: '5014073060',
+  bio: 'He is my doctor and for some reason he is now a part of my contacts'
+ }
+  )
+puts response.body
