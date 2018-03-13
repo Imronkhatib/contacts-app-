@@ -13,10 +13,12 @@ class V1::ContactsController < ApplicationController
 
   def create
     new_contact = Contact.new(
-    first_name: params[:input_first_name], 
+    first_name: params[:input_first_name],
+    middle_name: params[:input_middle_name], 
     last_name: params[:input_last_name],
     email: params[:input_email], 
-    phone_number: params[:input_phone_number] 
+    phone_number: params[:input_phone_number],
+    bio: params[:input_bio]
     )
     new_contact.save
     render json: 'you have create a new contact'

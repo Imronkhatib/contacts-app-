@@ -14,11 +14,11 @@ class Contact < ApplicationRecord
   end
 
   def full_name
-    full_name = first_name + " " + last_name
+    full_name = first_name.to_s + middle_name.to_s + " " + last_name.to_s
   end
   
   def japanese_phone_number
     #add +81 to all phone numbers
-    japanese_phone_number = "+81 " + phone_number
+    japanese_phone_number = "+81 " + phone_number.to_s
   end
 end
