@@ -8,7 +8,7 @@ class V1::ContactsController < ApplicationController
   def show
     the_id = params[:id]
     contact = Contact.find_by(id: the_id)  
-    render json: the_contact.as_json
+    render json: contact.as_json
   end
 
   def create
